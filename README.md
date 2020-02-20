@@ -1,1 +1,1 @@
-# Introsort-in-beta-assembly
+# Introsort in <text>&beta;</text>-assembly
