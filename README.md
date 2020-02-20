@@ -120,4 +120,8 @@ java -jar bsim.jar beta.uasm main.asm util.asm introsort.asm heapsort.asm
 ```
 from the folder containing all the files.
 
+The implementation of Introsort is split into several functions and files. The file `util.asm` contain definitions of useful macros (i.e. `ADDR`, `SWAP`...) and procedures (i.e. `log2`). The *last-argument-pushed-first* (LAPF) convention has been used through whole implementations. 
 
+The Heapsort algorithm is implemented in the file `heapsort.asm`. Similarly as in the C implementation, the procedure have two arguments: `array`, a pointer to the array to sort, and `size`, its size. The Introsort algorithm is implemented in the file `introsort.asm`. The `introsort`function has an additional parameter `maxd` which indicates the maximum number of recursive calls before switching to Heapsort.
+
+Finally, the file `main.asm` can be use to test your the project. It creates an array of a given size (that you can change) with random values and then calls sort to sort it. As you will see, all assembly file inclusions (i.e. using the `.include` statement) are performed in the main file and you should not include any file in `introsort.asm`.
