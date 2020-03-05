@@ -6,13 +6,13 @@ heapsort:
   PUSH(BP)
   MOVE(SP,BP)
 
-  |; ***** Arguments *****
+  |; ****** Arguments ******
   PUSH(R1)
   PUSH(R2)
   LD(BP, -12, R1) 		               |; R1 = array
   LD(BP, -16, R2) 		               |; R2 = size
 
-  |; ***** Local variables *****
+  |; ****** Local variables ******
   |; NB: For all our implementations, we choose to declare locals variables
   |; just after the initialisation of our arguments. This could lead to minimal
   |; non-optimalities of memory management but it simplifies the process ending
